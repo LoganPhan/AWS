@@ -1,4 +1,4 @@
-package com.accent.ees.publisher;
+package com.avro;
 
 import java.util.Arrays;
 

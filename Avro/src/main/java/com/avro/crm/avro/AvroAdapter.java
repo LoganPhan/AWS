@@ -1,6 +1,6 @@
-package com.accent.ees.publisher.crm.avro;
+package com.avro.crm.avro;
 
-import static com.accent.ees.publisher.crm.controller.ThrowingConsumer.throwingConsumerWrapper;
+import static com.avro.crm.avro.ThrowingConsumer.throwingConsumerWrapper;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;

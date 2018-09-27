@@ -1,4 +1,4 @@
-package com.accent.ees.publisher.crm.controller;
+package com.avro.crm.avro.controller;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
@@ -11,13 +11,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.accent.ees.publisher.aws.AwsS3Facade;
-import com.accent.ees.publisher.aws.CrmFolder;
-import com.accent.ees.publisher.aws.PublisherCrmRequest;
-import com.accent.ees.publisher.aws.PublisherCrmResponse;
-import com.accent.ees.publisher.crm.avro.AvroAdapter;
-import com.accent.ees.publisher.util.Utils;
 import com.amazonaws.AmazonServiceException;
+import com.avro.Utils.Utils;
+import com.avro.aws.AwsS3Facade;
+import com.avro.aws.CrmFolder;
+import com.avro.aws.PublisherCrmRequest;
+import com.avro.aws.PublisherCrmResponse;
+import com.avro.crm.avro.AvroAdapter;
 
 import lombok.extern.slf4j.Slf4j;
 

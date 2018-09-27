@@ -1,4 +1,4 @@
-package com.accent.ees.publisher.crm.controller;
+package com.avro.crm.avro;
 
 import java.util.function.Consumer;
 

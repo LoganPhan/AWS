@@ -1,4 +1,4 @@
-package com.accent.ees.publisher.aws;
+package com.avro.aws;
 
 import lombok.Data;
 import lombok.experimental.Accessors;
