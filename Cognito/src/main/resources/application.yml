@@ -1,0 +1,71 @@
+
+jwt:
+  headerName: authorization
+  expirationTime: 8640000000
+  secret: Z4enumnFOW1JFCfSwSNV
+  issuer: accent-technologies.com
+
+tcs.api-key: ${ACCENT_EES_TCS_API_KEY}
+
+# Set here configurations for the database connection
+spring:
+  datasource:
+    driverClassName: org.postgresql.Driver
+    url: ${ACCENT_EES_DB_URL}
+    username: ${ACCENT_EES_DB_USER}
+    password: ${ACCENT_EES_DB_PASS}
+
+server:
+  port: 8080
+  servlet.context-path: /ees/taskconfig
+management:
+  endpoints:
+    web:
+      base-path: /
+      exposure.include: health,loggers
+
+# ===============================
+# = Logging
+# ===============================
+
+logging:
+  level:
+    org.springframework: WARN
+    com.accent: INFO
+  file: ${LOG_PATH:/var/log/accent-ees}/task-config-service.log
+  file.max-size: 20MB
+  file.max-history: 2
+
+
+# ===============================
+# = Liquibase Configuration
+# ===============================
+
+spring.liquibase.change-log: classpath:db/db.changelog-master.xml
+spring.liquibase.default-schema: task_config
+
+# ===============================
+# = JPA / HIBERNATE
+# ===============================
+
+# Hibernate Dialect
+spring.jpa.properties.hibernate.dialect: org.hibernate.dialect.PostgreSQL94Dialect
+
+# Use spring.jpa.properties.* for Hibernate native properties (the prefix is
+# stripped before adding them to the entity manager).
+# Show or not log for each sql query
+spring.jpa.show-sql: false
+
+# Hibernate ddl auto (create, create-drop, update): with "update" the database
+# schema will be automatically updated accordingly to java entities found in
+# the project
+#spring.jpa.hibernate.ddl-auto = update
+# Naming strategy
+spring.jpa.hibernate.naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
+
+# The url store the corresponding public JSON Web Key (JWK) for your user pool.
+# It is available as part of a JSON Web Key Set (JWKS).
+# You can locate it at https://cognito-idp.{region}.amazonaws.com/{userPoolId}/.well-known/jwks.json.
+# References link: https://docs.aws.amazon.com/cognito/latest/developerguide/amazon-cognito-user-pools-using-tokens-verifying-a-jwt.html
+aws.cognito-idp.jwks.url: https://cognito-idp.%s.amazonaws.com/%s/.well-known/jwks.json
+
