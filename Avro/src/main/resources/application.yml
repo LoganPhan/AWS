@@ -1,0 +1,27 @@
+
+# ===============================
+# = Server Configuration
+# ===============================
+server:
+  port: 8082
+  servlet:
+    context-path: /ees/publisher
+management:
+  endpoints:
+    web:
+      base-path: /
+      exposure:
+        include: health,loggers
+
+# ===============================
+# = Logging
+# ===============================
+
+# Logging Preferences
+logging:
+  level:
+    org.springframework: WARN
+    com.accent-technologies: INFO
+  file: ${LOG_FILE:/var/log/accent-ees}/publisher-service.log
+
+com.accent.ees.publisher.config.config-api-url: https://api.accent-analytics.net/integration/v1/config?name=

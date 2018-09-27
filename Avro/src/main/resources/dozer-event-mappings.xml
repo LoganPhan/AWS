@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mappings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns="http://dozer.sourceforge.net"
+          xsi:schemaLocation="http://dozer.sourceforge.net http://dozer.sourceforge.net/schema/beanmapping.xsd">
+
+    <mapping>
+        <class-a>com.accent.ees.connectors.crm.CrmEvent</class-a>
+        <class-b>com.accent.ees.publisher.crm.avro.AvroCrmEvent</class-b>
+        <field>
+            <a>activityDateTime</a>
+            <b>activitydatetime</b>
+        </field>
+        <field>
+            <a>assignedUserId</a>
+            <b>ownerid</b>
+        </field>
+        <field>
+            <a>contactId</a>
+            <b>whoid</b>
+        </field>
+        <field>
+            <a>createdBy</a>
+            <b>createdbyid</b>
+        </field>
+        <field>
+            <a>dateEnd</a>
+            <b>enddatetime</b>
+        </field>
+        <field>
+            <a>dateEntered</a>
+            <b>createddate</b>
+        </field>
+        <field>
+            <a>dateModified</a>
+            <b>lastmodifieddate</b>
+        </field>
+        <field>
+            <a>deleted</a>
+            <b>isdeleted</b>
+        </field>
+        <field>
+            <a>durationMinutes</a>
+            <b>durationinminutes</b>
+        </field>
+        <field>
+            <a>modifiedUserId</a>
+            <b>lastmodifiedbyid</b>
+        </field>
+        <field>
+            <a>module</a>
+            <b>type</b>
+        </field>
+        <field>
+            <a>name</a>
+            <b>subject</b>
+        </field>
+        <field>
+            <a>parentId</a>
+            <b>whatid</b>
+        </field>
+        <field>
+            <a>startDateTime</a>
+            <b>startdatetime</b>
+        </field>
+    </mapping>
+
+</mappings>
